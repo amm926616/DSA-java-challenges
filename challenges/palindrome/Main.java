@@ -1,4 +1,4 @@
-package palindrome;
+package challenges.palindrome;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class Main {
                 char backCharacter = inputStringArray[inputString.length() - i - 1];
 
                 if (frontCharacter != backCharacter) {
-                    return inputString + " is not a palindrome: ";
+                    return inputString + " is not a challenges.palindrome: ";
                 }
             }
         } else {
@@ -37,12 +37,12 @@ public class Main {
                 char backCharacter = inputStringArray[newLength - i - 1];
 
                 if (frontCharacter != backCharacter) {
-                    return inputString + " is not a palindrome: ";
+                    return inputString + " is not a challenges.palindrome: ";
                 }
             }
         }
 
-        return inputString + " is a palindrome: ";
+        return inputString + " is a challenges.palindrome: ";
 
     }
 //

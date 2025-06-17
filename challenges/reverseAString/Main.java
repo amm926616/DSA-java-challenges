@@ -1,4 +1,4 @@
-package reverseAString;
+package challenges.reverseAString;
 
 public class Main {
     public static void main(String[] args) {
