@@ -28,8 +28,6 @@
 - [ ] Count Occurrences of a Character  
   *Given a string and a character, count how many times that character appears in the string.*
 
-Here’s your **Medium** and **Hard** DSA challenges formatted as Obsidian checkboxes, with rewritten and clearer guidance:
-
 ---
 
 ## 🟠 Medium Challenges
