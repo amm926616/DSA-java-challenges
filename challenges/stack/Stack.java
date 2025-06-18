@@ -1,50 +1,41 @@
 package challenges.stack;
 
 public class Stack {
-    int[] intArray;
-    int maxSize;
-    int currentIndex;
+    private final int[] stack;
+    private int currentIndex = 0;
 
-    public Stack(int maxSize) {
-        this.maxSize = maxSize;
-        intArray = new int[maxSize];
+    public Stack(int size) {
+        this.stack = new int[5];
+        this.currentIndex = 0;
     }
 
-    public Stack() {
-        this.maxSize = 0;
-        intArray = new int[maxSize];
-    }
-
-    // push, pop, peek, and isEmpty
-
-    public void push(int newInt) {
+    public void push(int value) {
         try {
-            intArray[currentIndex] = newInt;
-            currentIndex++;
+            this.stack[currentIndex] = value;
+            if (currentIndex == this.stack.length - 1) {
+                currentIndex = 0;
+            }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Stack Overflow");
+            System.out.println("Stack overflow");
         }
     }
 
     public int pop() {
-        // delete, return the value of current index
-        int value = intArray[currentIndex];
-        intArray[currentIndex] = 0;
+        if (this.stack.length == 0) {
+            throw new IllegalStateException("Stack underflow");
+        }
+
+        int value = this.stack[currentIndex];
+        stack[currentIndex] = 0;
         currentIndex--;
         return value;
     }
 
     public int peek() {
-        return intArray[currentIndex - 1];
+        return this.stack[currentIndex];
     }
 
     public boolean isEmpty() {
-        return currentIndex == 0;
-    }
-
-    public void show() {
-        for (int i = 0; i < currentIndex; i++) {
-            System.out.print(intArray[i] + " ");
-        }
+        return this.stack.length == 0;
     }
 }
